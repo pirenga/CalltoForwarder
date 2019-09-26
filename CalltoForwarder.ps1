@@ -1,6 +1,14 @@
 ## CallToForwarder 
 ## script for make call via 3CXPhone ver.6  on windows 10 
 ## support callto: sip: tel: 
+## by Mikhail Taniushkin email: mt[]pirenga.com 
+## source https://github.com/pirenga/CalltoForwarder
+## THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+## FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.
+##
+## You can use the current version of this software in a commercial environment, but we will always be grateful for a reasonable donation through Paypal. =)
+##
+######################################################################################################################################################################
 
 $_pathToSIPClient = "C:\Program Files (x86)\3CXPhone\3CXPhone.exe"
 $_OutPref = "9"         #Prefix access to external line, e.g. "0" or "9" or "" if direct access
@@ -10,7 +18,7 @@ $_cmd_param = "sip:"     # additional command line parameters for external sip a
 $_intPref ="810"        # prefix access to international line 
 
 
-
+#######################################################################################################################################################################
 If ($args[0] -eq $null) { Write-Host "You must provide Argument. e.g. `n`t`tcalltoforwarder.ps1 -install`n`t`t or `n`t`tcallforwarder.ps1 callto:+12345678901"; exit }
 
 $_inputStr = $args[0]
@@ -72,3 +80,6 @@ If ($args[0] -like '-install') { installCalltoForwarder; exit }
 If ($args[0] -like '-deinstall') { deinstallCalltoForwarder; exit }
 NumNormalize
 exit
+#
+#
+#
